@@ -8,12 +8,19 @@ def draw_circle(xcor,ycor,rad,filcol):
     turtle.circle(rad)
     turtle.end_fill()
 def draw_centered_circle(xcor1,ycor1,rad1,filcol1):
+    #Move the turtle up to move it to a specified location
     turtle.up()
+    #Go to a specific location that will make it possible to draw a circle centered on the first circle
     turtle.goto(xcor1,ycor1)
+    #After going to that location put the turtle down and start drawing
     turtle.down()
+    #initiate the function that allows to fill the circle with a specific color
     turtle.fillcolor(filcol1)
+    #start filling the color
     turtle.begin_fill()
+    #specify the radius of the centered cicle regards to the bigger circle radius(to go to the location we need to use specified coordinate which is xcor,0.75*radius+ycor)NEW COORDINATE
     turtle.circle(rad1)
+    #End the circle  by ending the color filling
     turtle.end_fill()
 
 def main():
