@@ -22,11 +22,16 @@ def draw_centered_circle(xcor1,ycor1,rad1,filcoln):
     turtle.circle(rad1)
     #End the circle  by ending the color filling
     turtle.end_fill()
-
-   # Same code as the one written above so there is no need for smiley function
+def tweak(tspeed,ttracer):
+    #Turtle speed ranging from 1-10 (0) for fast
+    turtle.speed(tspeed)
+    #Turtle tracer can be either True or False. Focus on capitalization
+    turtle.tracer(ttracer)
 
 def main():
+    turtle.hideturtle()
+    tweak(0,False)
     draw_circle(0,10,50,"yellow")
     draw_centered_circle(0,47.5,10,"pink")
-    draw_smiley()
+    input("Continue")
 main()
